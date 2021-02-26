@@ -8,6 +8,14 @@
 \description{
 What the package does (one paragraph).
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/dcwilbourne/hw04pdcwilbourne}
+  \item Report bugs at \url{https://github.com/dcwilbourne/hw04pdcwilbourne/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: David Wilbourne \email{dw4757a@american.edu} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
 

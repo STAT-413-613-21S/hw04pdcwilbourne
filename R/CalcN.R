@@ -14,7 +14,7 @@
 #' \dontrun{calcn(c(2, 4), 4) #returns an error}
 calcn <- function(x, n) {
   #test inputs
-  checkcalcnerrors(x,n)
+  checkinputs(x=x,n=n)
 
   #write function
   results <-  vector(mode = "double")
@@ -26,23 +26,26 @@ calcn <- function(x, n) {
   return(results[n])
 }
 
-checkcalcnerrors <- function(x,n) {
+checkinputs <- function(x,n) {
   # test that x and n are of correct length
-  try(if(length(x) != 3) stop("x is not of length 3"))
-  try(if(purrr::is_list(n)) stop("n cannot be a list"))
+  if(length(x) != 3) {
+    stop("x is not of length 3")
+  }
+  if(is.list(n)) {
+    stop("n cannot be a list")
+  }
   # test that x and n are numeric
-  try(if(!purrr::is_numeric(x)) stop("x is not numeric"))
-  try(if(!purrr::is_numeric(n)) stop("n is not numeric"))
+  if(!is.numeric(x)) {
+    stop("x is not numeric")
+  }
+  if(!is.numeric(n)) {
+    stop("n is not numeric")
+  }
   # test that n is a positive integer
-  try(if(n<=0) stop("n must be positive"))
-  try(if(n%%1 != 0) stop("n must be an integer"))
-
-  # write function
-}
-
-testcalcn <- function() {
-  calcn(c(2, 4, 3), 4)
-  calcn(c(11,1,130), 1000L)
-  calcn(c(11,1,130), 1L)
-  calcn(c(7, 3, 20), 8L)
+  if(n<=0) {
+    stop("n must be positive")
+  }
+  if(n%%1 != 0) {
+    stop("n must be an integer")
+  }
 }
