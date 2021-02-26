@@ -29,10 +29,10 @@ calcn <- function(x, n) {
 checkcalcnerrors <- function(x,n) {
   # test that x and n are of correct length
   try(if(length(x) != 3) stop("x is not of length 3"))
-  try(if(is_list(n)) stop("n cannot be a list"))
+  try(if(purrr::is_list(n)) stop("n cannot be a list"))
   # test that x and n are numeric
-  try(if(!is_numeric(x)) stop("x is not numeric"))
-  try(if(!is_numeric(n)) stop("n is not numeric"))
+  try(if(!purrr::is_numeric(x)) stop("x is not numeric"))
+  try(if(!purrr::is_numeric(n)) stop("n is not numeric"))
   # test that n is a positive integer
   try(if(n<=0) stop("n must be positive"))
   try(if(n%%1 != 0) stop("n must be an integer"))

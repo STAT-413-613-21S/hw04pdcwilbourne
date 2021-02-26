@@ -18,4 +18,5 @@ Suggests:
 Language: en-US
 Imports: 
     ggplot2,
-    tibble
+    tibble,
+    purrr

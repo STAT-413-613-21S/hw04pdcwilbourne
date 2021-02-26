@@ -26,7 +26,6 @@ This is a basic example which shows you how to call calcn, define a
 dataframe to input to calcn2, and call calcn2 on that dataframe:
 
 ``` r
-library(hw04pdcwilbourne)
 # Defines first three numbers in the sequences as 2, 4, and 3, and asks to find the 4th number in the sequence.
 #calcn(x = c(2, 4, 3), n = 4)
 
