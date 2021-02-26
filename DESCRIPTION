@@ -1,16 +1,21 @@
 Package: hw04pdcwilbourne
-Title: What the Package Does (One Line, Title Case)
+Title: Defines and Experiments with a Recursive Sequence
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "David",
+           family = "Wilbourne",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "dw4757a@american.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Suggests: 
+    spelling
+Language: en-US
+Imports: 
+    ggplot2,
+    tibble
