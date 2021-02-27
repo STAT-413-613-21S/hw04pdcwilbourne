@@ -27,7 +27,7 @@
 #' 2,4,3,12)
 #'
 #' rcrsv_plot(my_data) # plots the nth outcomes of the sequence from the
-#' fourth column
+#'                     # fourth column
 #'
 #' my_wrong_data <- tibble::tribble(
 #' ~x, ~y, ~z, ~n, ~p,
@@ -52,7 +52,7 @@ rcrsv_plot <- function(rcrsv_df) {
   rcrsv_df$output <- 0
   # generate output column
   for (i in seq(nrow(rcrsv_df))) {
-    rcrsv_df$output[i] <- rcrsv_solve(c(rcrsv_df[[i,1]], rcrsv_df[[i,2]], rcrsv_df[[i,3]]),
+    rcrsv_df$output[i] <- rcrsv_solve(x = c(rcrsv_df[[i,1]], rcrsv_df[[i,2]], rcrsv_df[[i,3]]),
                                n = rcrsv_df[[i,4]])
   }
   # plot output

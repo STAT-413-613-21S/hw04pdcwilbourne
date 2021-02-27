@@ -33,7 +33,7 @@ my_data <- tibble::tribble(
 2,4,3,12)
 
 rcrsv_plot(my_data) # plots the nth outcomes of the sequence from the
-fourth column
+                    # fourth column
 
 my_wrong_data <- tibble::tribble(
 ~x, ~y, ~z, ~n, ~p,
