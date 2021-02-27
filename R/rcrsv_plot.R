@@ -3,11 +3,11 @@
 #' Calcn2 plots the output values of a specific recursive sequence over
 #' time given a tibble with information on the sequence's values as input.
 #'
-#' @param tibble1
+#' @param rcrsv_df
 #' a tibble first three digits in the sequence and the nth value to calculate
 #'
 #' @return a plot of the output values for different values of n
-#' @export calcn2
+#' @export rcrsv_plot
 #'
 #' @examples
 #' my_data <- tibble::tribble(
@@ -25,13 +25,13 @@
 #' calcn2(my_data)
 #'
 
-calcn2 <- function(tibble1) {
-  tibble1$output <- 0
-  for (i in seq(nrow(tibble1))) {
-    tibble1$output[i] <- calcn(c(tibble1[[i,1]], tibble1[[i,2]], tibble1[[i,3]]),
-                               n = tibble1[[i,4]])
+rcrsv_plot <- function(rcrsv_df) {
+  rcrsv_df$output <- 0
+  for (i in seq(nrow(rcrsv_df))) {
+    rcrsv_df$output[i] <- rcrsv_solve(c(rcrsv_df[[i,1]], rcrsv_df[[i,2]], rcrsv_df[[i,3]]),
+                               n = rcrsv_df[[i,4]])
   }
-  output_plot <- ggplot2::ggplot(tibble1, ggplot2::aes(n, output)) +
+  output_plot <- ggplot2::ggplot(rcrsv_df, ggplot2::aes(n, output)) +
     ggplot2::geom_line() +
     ggplot2::labs(title = "Recursive Output", x = "n", y = "Output")
   return(output_plot)

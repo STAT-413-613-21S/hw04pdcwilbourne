@@ -7,12 +7,12 @@
 #' @param n the integer value in the sequence to return
 #'
 #' @return the value of the nth element in the sequence
-#' @export calcn
+#' @export rcrsv_solve
 #'
 #' @examples
 #' calcn(c(2, 4, 3), 4) # returns 2.5
 #' \dontrun{calcn(c(2, 4), 4) #returns an error}
-calcn <- function(x, n) {
+rcrsv_solve <- function(x, n) {
   #test inputs
   checkinputs(x=x,n=n)
 
