@@ -9,7 +9,7 @@
 hw04pdcwilbourne defines a recursive sequence and allows the user to
 experiment with it. The user is able to identify future numbers in the
 sequence given the starting three, and the user is able to plot the
-outputs of that sequence on a line graph. The package also checks for
+outputs of the sequence on a line graph. The package also checks for
 errors in the inputs to ensure the functions work as intended.
 
 ## Installation
@@ -22,8 +22,9 @@ install.packages("hw04pdcwilbourne")
 
 ## Example
 
-This is a basic example which shows you how to call calcn, define a
-dataframe to input to calcn2, and call calcn2 on that dataframe:
+This is a basic example which shows you how to call rcrsv\_solve, define
+a dataframe to input to rcrsv\_plot, and call rcrsv\_plot on that
+dataframe:
 
 ``` r
 library(hw04pdcwilbourne)

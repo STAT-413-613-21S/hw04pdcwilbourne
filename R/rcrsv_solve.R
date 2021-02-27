@@ -10,11 +10,11 @@
 #' @export rcrsv_solve
 #'
 #' @examples
-#' calcn(c(2, 4, 3), 4) # returns 2.5
-#' \dontrun{calcn(c(2, 4), 4) #returns an error}
+#' rcrsv_solve(c(2, 4, 3), 4) # returns 2.5
+#' \dontrun{rcrsv_solve(c(2, 4), 4) #returns an error}
 rcrsv_solve <- function(x, n) {
   #test inputs
-  checkinputs(x=x,n=n)
+  rcrsv_solve_checkinputs(x=x,n=n)
 
   #write function
   results <-  vector(mode = "double")
@@ -26,7 +26,7 @@ rcrsv_solve <- function(x, n) {
   return(results[n])
 }
 
-checkinputs <- function(x,n) {
+rcrsv_solve_checkinputs <- function(x,n) {
   # test that x and n are of correct length
   if(length(x) != 3) {
     stop("x is not of length 3")
