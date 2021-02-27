@@ -7,18 +7,18 @@
 rcrsv_solve(x, n)
 }
 \arguments{
-\item{x}{a vector of the first three numbers in the sequence}
+\item{x}{A vector of the first three numbers in the sequence}
 
-\item{n}{the integer value in the sequence to return}
+\item{n}{The integer value in the sequence to return}
 }
 \value{
-the value of the nth element in the sequence
+Returns the value of the nth element in the sequence
 }
 \description{
-For the recursive sequence xn = xn−1 + ((xn−3 − xn−2)/n), returns the
+For the recursive sequence xn = xn-1 + ((xn-3 - xn-2)/n), returns the
 nth value in the sequence given the first three values.
 }
 \examples{
 rcrsv_solve(c(2, 4, 3), 4) # returns 2.5
-\dontrun{rcrsv_solve(c(2, 4), 4) #returns an error}
+\dontrun{rcrsv_solve(c(2, 4), 4) # returns an error}
 }

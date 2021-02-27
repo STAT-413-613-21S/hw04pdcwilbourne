@@ -2,19 +2,22 @@
 % Please edit documentation in R/rcrsv_plot.R
 \name{rcrsv_plot}
 \alias{rcrsv_plot}
-\title{Plots Output Values for Recursive Sequence}
+\title{Plots Output for a (Specific) Recursive Sequence}
 \usage{
 rcrsv_plot(rcrsv_df)
 }
 \arguments{
-\item{rcrsv_df}{a tibble first three digits in the sequence and the nth value to calculate}
+\item{rcrsv_df}{A tibble with four columns: the first three digits in the sequence, and the
+nth value to calculate. The first three columns typically remain the same,
+while the last column increases.}
 }
 \value{
-a plot of the output values for different values of n
+Returns a plot of the output.
 }
 \description{
-Plots the output values of a specific recursive sequence over
-time given a tibble with information on the sequence's values as input.
+For the recursive sequence xn = xn-1 + ((xn-3 - xn-2)/n), plots the output
+of the sequence given as input a tibble with information on the sequence's
+beginning values and the specific numbers in the sequence to plot.
 }
 \examples{
 my_data <- tibble::tribble(
@@ -29,6 +32,21 @@ my_data <- tibble::tribble(
 2,4,3,10,
 2,4,3,12)
 
-rcrsv_plot(my_data) #plots the numbers in the sequence from column 4
+rcrsv_plot(my_data) # plots the nth outcomes of the sequence from the
+fourth column
+
+my_wrong_data <- tibble::tribble(
+~x, ~y, ~z, ~n, ~p,
+2,4,3,3,5,
+2,4,3,4,5,
+2,4,3,5,5,
+2,4,3,6,5,
+2,4,3,7,5,
+2,4,3,8,5,
+2,4,3,9,5,
+2,4,3,10,5,
+2,4,3,12,5)
+
+\dontrun{rcrsv_plot(my_wrong_data) # returns an error}
 
 }
