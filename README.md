@@ -14,11 +14,8 @@ errors in the inputs to ensure the functions work as intended.
 
 ## Installation
 
-This package is only available at the permission of the author at
-
-``` r
-install.packages("hw04pdcwilbourne")
-```
+This package is only available at the permission of the author. To
+install it, please email <dw4757a@american.edu>.
 
 ## Example
 

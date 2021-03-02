@@ -7,7 +7,7 @@
 rcrsv_plot(rcrsv_df)
 }
 \arguments{
-\item{rcrsv_df}{A tibble with four columns: the first three digits in the sequence, and the
+\item{rcrsv_df}{A dataframe with four columns: the first three digits in the sequence, and the
 nth value to calculate. The first three columns typically remain the same,
 while the last column increases.}
 }
@@ -16,7 +16,7 @@ Returns a plot of the output.
 }
 \description{
 For the recursive sequence xn = xn-1 + ((xn-3 - xn-2)/n), plots the output
-of the sequence given as input a tibble with information on the sequence's
+of the sequence given as input a dataframe with information on the sequence's
 beginning values and the specific numbers in the sequence to plot.
 }
 \examples{

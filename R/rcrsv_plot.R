@@ -1,11 +1,11 @@
 #' Plots Output for a (Specific) Recursive Sequence
 #'
 #' For the recursive sequence xn = xn-1 + ((xn-3 - xn-2)/n), plots the output
-#' of the sequence given as input a tibble with information on the sequence's
+#' of the sequence given as input a dataframe with information on the sequence's
 #' beginning values and the specific numbers in the sequence to plot.
 #'
 #' @param rcrsv_df
-#' A tibble with four columns: the first three digits in the sequence, and the
+#' A dataframe with four columns: the first three digits in the sequence, and the
 #' nth value to calculate. The first three columns typically remain the same,
 #' while the last column increases.
 #'
@@ -45,9 +45,11 @@
 #'
 
 rcrsv_plot <- function(rcrsv_df) {
+  # assign a few variables as null to avoid note when calling check()
+  n <- NULL
+  output <- NULL
   # test inputs
   rcrsv_plot_checkinputs(rcrsv_df)
-
   # write function
   rcrsv_df$output <- 0
   # generate output column
@@ -56,7 +58,7 @@ rcrsv_plot <- function(rcrsv_df) {
                                n = rcrsv_df[[i,4]])
   }
   # plot output
-  output_plot <- ggplot2::ggplot(rcrsv_df, ggplot2::aes(n, output)) +
+  output_plot <- ggplot2::ggplot(rcrsv_df, ggplot2::aes(x = n, y = output)) +
     ggplot2::geom_line() +
     ggplot2::labs(title = "Recursive Output", x = "n", y = "Output")
   return(output_plot)

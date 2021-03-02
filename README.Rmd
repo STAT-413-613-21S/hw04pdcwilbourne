@@ -22,11 +22,7 @@ hw04pdcwilbourne defines a recursive sequence and allows the user to experiment 
 
 ## Installation
 
-This package is only available at the permission of the author at
-
-``` {r eval = FALSE}
-install.packages("hw04pdcwilbourne")
-```
+This package is only available at the permission of the author at dw4757a@american.edu.
 
 ## Example
 
