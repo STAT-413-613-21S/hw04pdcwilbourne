@@ -15,7 +15,7 @@ errors in the inputs to ensure the functions work as intended.
 ## Installation
 
 This package is only available at the permission of the author. To
-install it, please email <dw4757a@american.edu>.
+install it, please email me at <dw4757a@american.edu>.
 
 ## Example
 
